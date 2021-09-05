@@ -1,9 +1,19 @@
 package Stepdef;
 
+import Base.Config;
+import Pageobject.Login_Page;
 import io.cucumber.java.en.*;
 
+import java.io.FileNotFoundException;
 
-public class Login_Steps {
+
+public class Login_Steps extends Config {
+
+    Login_Page login=new Login_Page(driver);
+
+    public Login_Steps() throws FileNotFoundException {
+    }
+
     @Given("user at login page")
     public void userAtLoginPage() {
 

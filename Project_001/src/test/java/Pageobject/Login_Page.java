@@ -1,13 +1,20 @@
 package Pageobject;
 
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
+
+import java.io.FileNotFoundException;
+
+
 public class Login_Page {
-    public Login_Page (WebDriver driver){
+
+
+    public Login_Page (WebDriver driver) throws FileNotFoundException {
         PageFactory.initElements(driver, this);
     }
 
@@ -22,6 +29,15 @@ public class Login_Page {
 
     @FindBy(how = How.NAME, using ="email")
     public WebElement profileName;
+
+
+
+
+    public void inputEmail(){
+
+
+
+    }
 
 
 
